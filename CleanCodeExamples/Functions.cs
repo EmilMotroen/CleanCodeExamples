@@ -91,7 +91,7 @@ namespace CleanCodeExamples
         }
 
         // -----------------------------------------------------------------------------------
-        // Metoder fra side 23 i PowerPoint - minesweeper
+        // Metoder fra side 23 i PowerPoint (side 18-19 i Clean Code boka) - minesweeper
         int[] theList = [1, 2, 3, 4, 5];
         public List<int> GetThem()
         {
