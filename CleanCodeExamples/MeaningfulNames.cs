@@ -10,12 +10,12 @@ namespace CleanCodeExamples
     {
         private string _desc;  // Description of ...
 
-        void SetDescription(string description)
+        public void SetDescription(string description)
         {
             _desc = description;
         }
 
-        string GetDescription()
+        public string GetDescription()
         {
             return _desc;
         }

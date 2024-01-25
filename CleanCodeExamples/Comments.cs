@@ -6,8 +6,6 @@ using System.Threading.Tasks;
 
 namespace CleanCodeExamples
 {
-    using System;
-
     public class CommentExample
     {
         // Good Comment: Describes the purpose of the class
