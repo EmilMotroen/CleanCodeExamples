@@ -1,11 +1,13 @@
-﻿namespace CleanCodeExamples
+﻿using System.Collections;
+
+namespace CleanCodeExamples
 {
     public class LinkedListDemo
     {
         Node head;
 
         int size = 0;
-        int totalCapacity = 3;
+        public int totalCapacity = 3;
 
         public LinkedListDemo() { }
 
@@ -85,6 +87,64 @@
             {
                 this.data = data;
                 next = null;
+            }
+        }
+
+        // -----------------------------------------------------------------------------------
+        // Metoder fra side 23 i PowerPoint - minesweeper
+        int[] theList = [1, 2, 3, 4, 5];
+        public List<int> GetThem()
+        {
+            List<int> list1 = new List<int>();
+            for (int i = 0; i < theList.Length; i++)
+            {
+                if (theList[i] == 4)
+                {
+                    list1.Add(theList[i]);
+                }
+            }
+
+            return list1;
+        }
+
+        // 3x3 minesweeper der 1 representerer der det er et flagg, 0 er uten flagg
+        Cell[] gameBoard = [
+            new Cell(0), new Cell(0), new Cell(0),
+            new Cell(0), new Cell(1), new Cell(0),
+            new Cell(0), new Cell(0), new Cell(0)
+            ];
+
+        public List<Cell> GetFlaggedCells()
+        {
+            List<Cell> flaggedCells = new List<Cell>();
+            foreach (Cell cell in gameBoard)
+            {
+                if (cell.IsFlagged())
+                {
+                    flaggedCells.Add(cell);
+                }
+            }
+
+            return flaggedCells;
+        }
+
+        public class Cell
+        {
+            int flag;
+
+            public Cell(int flag)
+            {
+                this.flag = flag;
+            }
+
+            public bool IsFlagged()
+            {
+                if (flag == 1)
+                {
+                    return true;
+                }
+
+                return false;
             }
         }
     }
