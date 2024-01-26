@@ -9,17 +9,27 @@ namespace CleanCodeExamples
         int size = 0;
         public int totalCapacity = 3;
 
+        readonly bool readOnly = false;
+
         public LinkedListDemo() { }
 
         public void Add(int value)
         {
-            IncrementSize();
-            if (AtCapacity())
+            if (!ReadOnly())
             {
-                Grow();
-            }
+                IncrementSize();
+                if (AtCapacity())
+                {
+                    Grow();
+                }
 
-            AddElement(value);
+                AddElement(value);
+            }
+        }
+
+        private bool ReadOnly()
+        {
+            return readOnly;
         }
 
         private void AddElement(int value)
@@ -92,6 +102,8 @@ namespace CleanCodeExamples
 
         // -----------------------------------------------------------------------------------
         // Metoder fra side 23 i PowerPoint (side 18-19 i Clean Code boka) - minesweeper
+        // Merk: Disse metodene er hentet fra PowerPoint og har ikke en full implementasjon
+        // av et fungerende program
         int[] theList = [1, 2, 3, 4, 5];
         public List<int> GetThem()
         {
@@ -128,6 +140,7 @@ namespace CleanCodeExamples
             return flaggedCells;
         }
 
+        // 
         public class Cell
         {
             int flag;

@@ -1,9 +1,8 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+using CleanCodeExamples;
 
-namespace CleanCodeExamples
+namespace FunctionsTests
 {
-    [TestClass]
-    internal class MeaningfulNamesTests
+    class MeaningfulNamesTests
     {
         [TestMethod]
         public void SetDescription_ShouldSetDescription()
@@ -29,7 +28,7 @@ namespace CleanCodeExamples
             string description = meaningfulNames.GetDescription();
 
             // Assert
-            Assert.IsNull(description);
+            Assert.IsNull("Not null");
         }
 
         [TestMethod]

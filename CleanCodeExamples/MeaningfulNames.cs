@@ -1,6 +1,6 @@
 ﻿namespace CleanCodeExamples
 {
-    class MeaningfulNames
+    public class MeaningfulNames
     {
         private string _strDesc;  // Description of ... with type encoding 
 

@@ -1,9 +1,9 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+using CleanCodeExamples;
 
-namespace CleanCodeExamples
+namespace FunctionsTests
 {
     [TestClass]
-    class LinkedListDemoTests
+    public class LinkedListDemoTests
     {
         [TestMethod]
         public void Add_AddsElementToList()
