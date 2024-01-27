@@ -1,8 +1,9 @@
 using CleanCodeExamples;
 
-namespace FunctionsTests
+namespace MeaningfulNamesTests
 {
-    class MeaningfulNamesTests
+    [TestClass]
+    public class MeaningfulNamesTests
     {
         [TestMethod]
         public void SetDescription_ShouldSetDescription()
@@ -28,7 +29,7 @@ namespace FunctionsTests
             string description = meaningfulNames.GetDescription();
 
             // Assert
-            Assert.IsNull("Not null");
+            Assert.IsNull(description);
         }
 
         [TestMethod]
